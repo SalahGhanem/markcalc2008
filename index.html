@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>حساب معدل جيل 2008</title>
+    <!-- وصف الصفحة -->
+    <meta name="description"
+        content="موقع غير رسمي لحساب معدل جيل 2008 الصادر من وزارة التربية والتعليم. إدخل علامات موادك واحسب المعدل بسهولة.">
+
+    <!-- الكلمات المفتاحية -->
+    <meta name="keywords" content="حساب المعدل, جيل 2008, وزارة التربية والتعليم, علامات, معدل 2008">
+
+    <!-- اللغة -->
+    <meta name="language" content="ar">
+
+    <!-- أيقونة الموقع مع نص بديل -->
+    <link rel="icon" href="/media/2008.png" type="image/png" alt="شعار موقع حساب معدل جيل 2008">
+
+    <!-- ضغط وتحميل CSS -->
+    <link rel="stylesheet" href="css/style.css" media="all" />
+    <link rel="stylesheet" href="css/animation-style.css" media="all" />
+
+    <!-- تحسين الأداء -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/animation-style.css" as="style">
+</head>
+
+<body>
+    <header>
+        <h1 id="hisab">حساب معدل جيل 2008</h1>
+        <h2 id="note">الموقع غير رسمي وهو لحساب المعدل الصادر من وزارة التربية والتعليم</h2>
+    </header>
+
+    <div class="great-result-container" id="great-result-container">
+        <div class="main-result-container">
+            <div class="result-container" id="result-container">
+                <label id="result"></label><br>
+                <label id="alert"></label><br>
+                <label id="result30"></label><br>
+                <label id="result100"></label><br>
+                <div class="ok-button">
+                    <button onclick="ok()">موافق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="head-info">
+            <label>قم بادخال العلامات</label>
+        </div>
+        <section class="mark-input">
+            <div class="mada">
+                <label id="islamic_id" for="islamic">علامة مادة التربية الإسلامية (0 - 100) :</label>
+                <input type="number" id="islamic" placeholder="0-100" min="0" max="100">
+            </div>
+            <div class="mada">
+                <label id="arabic_id" for="arabic">علامة مادة اللغة العربية (0 - 100) :</label>
+                <input type="number" id="arabic" placeholder="0-100" min="0" max="100">
+            </div>
+            <div class="mada">
+                <label id="english_id" for="english">علامة مادة اللغة الإنجليزية (0 - 60) :</label>
+                <input type="number" id="english" placeholder="0-60" min="0" max="60">
+            </div>
+            <div class="mada">
+                <label id="taree_id" for="taree">علامة مادة تاريخ الأردن (0 - 40) :</label>
+                <input type="number" id="taree" placeholder="0-40" min="0" max="40">
+            </div>
+        </section>
+        <div class="calculate-button">
+            <button id="calc" onclick="calculate()">احسب المعدل</button>
+        </div>
+    </main>
+
+    <!-- تحسين تحميل JS -->
+    <script src="script/mark-script.js" defer></script>
+    <script src="script/type-script.js" defer></script>
+</body>
+
+</html>
