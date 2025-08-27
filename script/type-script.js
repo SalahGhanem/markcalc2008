@@ -15,7 +15,7 @@ islamic.addEventListener('input', () => {
         islamic_id.innerText = "الرجاء ادخال علامة بين ( 0 - 100 ) : "
         islamic_id.style.color = "red";
         dellay = setTimeout(() => {
-            islamic_id.innerText = "علامة مادة التربية الإسلامية ( 0 - 100 ) : "
+            islamic_id.innerText = "علامة مادة التربية الإسلامية (0 - 100) :"
             islamic_id.style.color = "black";
         }, 2000);
     }
@@ -58,4 +58,5 @@ taree.addEventListener('input', () => {
             taree_id.style.color = "black";
         }, 2000);
     }
+
 });
