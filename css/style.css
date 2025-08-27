@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+    /* رمادي فاتح لأزرق سماوي */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    /* بنفسجي وأزرق عصري */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+header h1,
+header h2 {
+    margin: 0;
+}
+
+.great-result-container {
+    position: fixed;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.main-result-container {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    max-width: 90%;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.result-container {
+    font-size: clamp(22px, 2.5vw, 40px);
+}
+
+#result {
+    font-size: clamp(25px, 3.5vw, 45px);
+    color: #764ba2;
+    font-weight: bold;
+
+}
+
+#alert {
+    font-size: clamp(25px, 2.8vw, 45px);
+    color: #ff0000;
+    display: none;
+}
+
+/* ---- تنسيق main-content ---- */
+.main-content {
+    padding: 35px;
+    max-width: 800px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #ffffff, #f9f9ff);
+    /* أبيض مع لمسة بنفسجي فاتح */
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease;
+
+    /* الإطار المتقطع */
+    border: 1.5px dashed #c7c7c7;
+}
+
+/* خط زخرفي علوي */
+.main-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2, #43cea2);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.main-content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2, #43cea2);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+
+
+.head-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(22px, 2.5vw, 40px);
+    color: #333;
+    font-weight: bold;
+}
+
+.mark-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 750px;
+}
+
+.mada {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.mada label {
+    font-size: clamp(18px, 2vw, 36px);
+    width: 84%;
+    direction: rtl;
+    text-align: justify;
+    color: #444;
+}
+
+.mada input {
+    font-size: clamp(18px, 2vw, 36px);
+    width: 16%;
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* تأثير عند التركيز */
+.mada input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 6px rgba(102, 126, 234, 0.6);
+    outline: none;
+}
+
+/* إخفاء الأسهم في Chrome و Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ok-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculate-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 25px;
+    margin: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0);
+}
